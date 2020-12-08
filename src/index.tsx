@@ -1,17 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// Redux
+import { Provider } from 'react-redux';
+// Router
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// Store
+import { store } from './store';
+// Custom Components
+import MainPage from './pages/mainPage';
+import SearchPage from './pages/searchPage';
+import PosterBg from './components/posterBg';
+import Header from './components/header';
+import { ToastsContainer } from './components/toast';
+// Bootstrap
+import { Container as BContainer } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Provider store={ store }>
+        <Header />
+        <BContainer>
+          <PosterBg />
+          <Switch>
+            <Route exact path="/">
+              <MainPage />
+            </Route>
+            <Route path="/search">
+              <SearchPage />
+          </Route>
+          </Switch>
+        </BContainer>
+        <ToastsContainer />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

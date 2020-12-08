@@ -1,0 +1,34 @@
+.header {
+  margin-bottom: 30px;
+
+  &__clear-button {
+    position: absolute;
+    right: 1.2rem;
+    color: #e0e0e0;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.1rem;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  .header__navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .header__search-input {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 0, 0, 0.6);
+    padding-right: 2rem;
+  }
+
+  .header__search-input:focus {
+    box-shadow: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(0, 0, 0, 0.6);
+  }
+}

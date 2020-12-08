@@ -1,0 +1,55 @@
+.movie-item {
+
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  height: 400px;
+
+  &:hover {
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.7);
+    transform: scale(1.02);
+  }
+
+  // Element
+  &__poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px 10px;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+
+  &__inner:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__title {
+    font-size: 20px;
+    color: #fff;
+    
+  }
+
+  &__year {
+    font-size: 14px;
+    color: #fff;
+  }
+}

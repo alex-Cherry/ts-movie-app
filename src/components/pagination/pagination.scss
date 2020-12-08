@@ -1,0 +1,37 @@
+.movies-pagination {
+
+  .page-link {
+    background-color: transparent;
+    font-size: 12px;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+  }
+  .page-link:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #000;
+  }
+
+  .page-item.active .page-link {
+    border-color: #fff;
+    background-color: #fff;
+    color: #000;
+  }
+
+  .page-item.disabled .page-link {
+    color: #757575;
+    border-color: #757575;
+    background-color: transparent;
+  }
+
+  .page-ellipsis .page-link {
+    cursor: default;
+  }
+
+  .page-ellipsis .page-link:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+
+}
